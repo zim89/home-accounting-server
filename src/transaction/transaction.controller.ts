@@ -22,13 +22,7 @@ import { AuthorGuard } from 'src/guard/author.guard';
 export class TransactionController {
   constructor(private readonly transactionService: TransactionService) {}
 
-  @Get(':type')
-  @UseGuards(JwtAuthGuard)
-  findAllByType(@Req() req, @Param('type') type: string) {
-    return this.transactionService.findAllByType(+req.user.id, type);
-  }
-
-  // url/pagination?page=1&limit=10
+  // url/transactions/pagination?page=1&limit=10
   @Get('pagination')
   @UseGuards(JwtAuthGuard)
   findAllWithPagination(
@@ -41,6 +35,12 @@ export class TransactionController {
       +page,
       +limit,
     );
+  }
+
+  @Get(':type')
+  @UseGuards(JwtAuthGuard)
+  findAllByType(@Req() req, @Param('type') type: string) {
+    return this.transactionService.findAllByType(+req.user.id, type);
   }
 
   @Post()
