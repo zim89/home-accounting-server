@@ -1,10 +1,11 @@
-#### Home accounting App
+# Home Accounting App
 
-`yarn add @nestjs/config`
-`yarn add @nestjs/typeorm typeorm pg`
-`yarn add class-validator class-transformer`
-`yarn add argon2`
-`yarn add @nestjs/passport passport passport-local`
-`yarn add -D @types/passport-local`
-`yarn add @nestjs/jwt passport-jwt`
-`yarn add -D @types/passport-jwt`
+Fullstack React-Nest App
+
+## Backend Stack
+
+Nest.js, PostgreSQL, TypeORM, Jwt Auth, Passport.js
+
+## Frontend Stack
+
+React.js, TypeScript, Redux Toolkit, Tailwind CSS, Vite
